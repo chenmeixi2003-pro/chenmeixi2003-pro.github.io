@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- 渐变背景 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff9a9e" />
+      <stop offset="100%" stop-color="#fecfef" />
+    </linearGradient>
+    <!-- 脸部阴影 -->
+    <radialGradient id="faceShadow" cx="50%" cy="50%" r="50%" fx="50%" fy="70%">
+      <stop offset="70%" stop-color="#ffe0d2" />
+      <stop offset="100%" stop-color="#f5c1b5" />
+    </radialGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- 圆形背景 -->
+  <circle cx="200" cy="200" r="190" fill="url(#bgGradient)" filter="url(#dropShadow)" />
+
+  <!-- 头发后部 -->
+  <path d="M 120 150 C 100 250, 100 350, 140 380 C 200 390, 260 390, 260 380 C 300 350, 300 250, 280 150 Z" fill="#3b2d2a" />
+
+  <!-- 脖子 -->
+  <path d="M 180 260 L 220 260 L 220 300 C 220 310, 180 310, 180 300 Z" fill="#f5c1b5" />
+
+  <!-- 衣服 (西装领/带领结，体现专业又不失可爱) -->
+  <path d="M 100 380 C 130 310, 160 300, 200 300 C 240 300, 270 310, 300 380 Z" fill="#ffffff" />
+  <path d="M 160 300 L 200 330 L 240 300 L 200 380 Z" fill="#f8f9fa" />
+  <path d="M 180 320 C 190 340, 210 340, 220 320 C 230 330, 210 350, 200 350 C 190 350, 170 330, 180 320 Z" fill="#ff7675" />
+
+  <!-- 脸部 -->
+  <ellipse cx="200" cy="210" rx="65" ry="75" fill="url(#faceShadow)" />
+  
+  <!-- 腮红 -->
+  <ellipse cx="155" cy="230" rx="12" ry="8" fill="#ff9a9e" opacity="0.6" />
+  <ellipse cx="245" cy="230" rx="12" ry="8" fill="#ff9a9e" opacity="0.6" />
+
+  <!-- 眼睛 (有神，体现INTJ->ENTJ的自信) -->
+  <!-- 左眼 -->
+  <path d="M 150 205 Q 165 190 180 205" fill="none" stroke="#2d3436" stroke-width="4" stroke-linecap="round" />
+  <circle cx="165" cy="210" r="7" fill="#2d3436" />
+  <circle cx="163" cy="208" r="2.5" fill="#ffffff" />
+  <!-- 右眼 -->
+  <path d="M 220 205 Q 235 190 250 205" fill="none" stroke="#2d3436" stroke-width="4" stroke-linecap="round" />
+  <circle cx="235" cy="210" r="7" fill="#2d3436" />
+  <circle cx="233" cy="208" r="2.5" fill="#ffffff" />
+
+  <!-- 眉毛 -->
+  <path d="M 145 185 Q 165 180 180 190" fill="none" stroke="#3b2d2a" stroke-width="3" stroke-linecap="round" />
+  <path d="M 220 190 Q 235 180 255 185" fill="none" stroke="#3b2d2a" stroke-width="3" stroke-linecap="round" />
+
+  <!-- 鼻子 -->
+  <path d="M 198 225 Q 200 230 202 225" fill="none" stroke="#e0a899" stroke-width="2" stroke-linecap="round" />
+
+  <!-- 嘴巴 (自信微笑) -->
+  <path d="M 185 245 Q 200 255 215 245" fill="none" stroke="#e17055" stroke-width="3" stroke-linecap="round" />
+
+  <!-- 头发刘海 -->
+  <path d="M 120 180 C 130 110, 200 100, 240 120 C 220 130, 200 120, 180 140 C 160 160, 140 160, 120 180 Z" fill="#3b2d2a" />
+  <path d="M 280 180 C 270 110, 200 100, 160 120 C 180 130, 200 120, 220 140 C 240 160, 260 160, 280 180 Z" fill="#3b2d2a" />
+
+  <!-- 蒙古族特色配饰 (头饰) -->
+  <path d="M 130 140 Q 200 120 270 140" fill="none" stroke="#f1c40f" stroke-width="6" stroke-linecap="round" />
+  <circle cx="200" cy="128" r="10" fill="#e74c3c" />
+  <circle cx="165" cy="133" r="7" fill="#0984e3" />
+  <circle cx="235" cy="133" r="7" fill="#0984e3" />
+  
+  <!-- 星星点缀 -->
+  <path d="M 80 80 L 85 95 L 100 100 L 85 105 L 80 120 L 75 105 L 60 100 L 75 95 Z" fill="#ffffff" opacity="0.8" />
+  <path d="M 320 100 L 323 110 L 335 112 L 323 114 L 320 125 L 317 114 L 305 112 L 317 110 Z" fill="#ffffff" opacity="0.6" />
+</svg>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈美希 (Maisie) - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- 侧边栏导航 -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>陈美希</h2>
+                <p class="en-name">Maisie Chen</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#internships"><i class="fas fa-briefcase"></i> Internships</a></li>
+                <li><a href="#academic"><i class="fas fa-graduation-cap"></i> Academic & Projects</a></li>
+                <li><a href="#exploration"><i class="fas fa-rocket"></i> Project Exploration</a></li>
+                <li><a href="#cv"><i class="fas fa-file-pdf"></i> CV Download</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>© 2026 Maisie. All Rights Reserved.</p>
+            </div>
+        </nav>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            
+            <!-- Home Section -->
+            <section id="home" class="section active-section">
+                <div class="hero-card">
+                    <div class="hero-info">
+                        <h1 class="greeting">Hi there, you can call me <span class="highlight">Maisie</span>! 👋</h1>
+                        <div class="tags-container">
+                            <span class="badge badge-ethnic"><i class="fas fa-horse"></i> 蒙古族</span>
+                            <span class="badge badge-mbti"><i class="fas fa-brain"></i> MBTI: INTJ ➔ ENTJ</span>
+                        </div>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-phone-alt"></i> (86) 18147042827 / (852) 56243450</li>
+                            <li><i class="fas fa-envelope"></i> 18147042827@163.com</li>
+                        </ul>
+                        
+                        <div class="skills-box">
+                            <h3><i class="fas fa-laptop-code"></i> 个人技能 (Skills)</h3>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>Power BI</span>
+                                <span>Master Go</span>
+                                <span>Stata</span>
+                                <span>SPSS</span>
+                                <span>R</span>
+                                <span>English (IELTS: 6.5)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="avatar.jpg" alt="Maisie Avatar" class="main-avatar floating">
+                    </div>
+                </div>
+
+                <div class="education-card mt-4">
+                    <h2><i class="fas fa-map-marked-alt"></i> 教育足迹 (Education Map)</h2>
+                    <p class="hint">点击城市名称，地图将自动跳转到对应地点，见证我的成长轨迹！</p>
+                    
+                    <div class="edu-details mb-4">
+                        <div class="edu-item">
+                            <div class="edu-time">2025.08 - 2026.11 (预计)</div>
+                            <div class="edu-school">香港中文大学 (QS前50)</div>
+                            <div class="edu-major">理学硕士 | 市场营销专业 -- AI与大数据方向</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-time">2021.09 - 2025.06</div>
+                            <div class="edu-school">西南财经大学 (211)</div>
+                            <div class="edu-major">经济学学士 | 数字经济专业 -- 数字技术交叉方向</div>
+                        </div>
+                    </div>
+
+                    <div class="map-nav">
+                        <button class="city-btn" data-city="hulunbuir">呼伦贝尔 (Hulunbuir)</button>
+                        <span class="nav-divider">—</span>
+                        <button class="city-btn" data-city="chengdu">成都 (Chengdu)</button>
+                        <span class="nav-divider">—</span>
+                        <button class="city-btn" data-city="hongkong">香港 (Hong Kong)</button>
+                        <span class="nav-divider">—</span>
+                        <button class="city-btn" data-city="shenzhen">深圳 (Shenzhen)</button>
+                    </div>
+
+                    <div class="map-container">
+                        <div id="real-map"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实习经历 Section -->
+            <section id="internships" class="section">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> 实习经历 (Internships)</h2>
+                <p class="section-subtitle">点击卡片展开详情 👇</p>
+                
+                <div class="accordion">
+                    <!-- 实习1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header color-1">
+                            <div class="acc-title-area">
+                                <h3>枫叶互动 <span class="tag">出海短剧 TOP 1</span></h3>
+                                <p class="acc-role">ReelShort - 用户增长产品实习生</p>
+                            </div>
+                            <div class="acc-time">2026.03 - 至今</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="okr-box">
+                                <strong>OKR:</strong> 通过产品侧功能的搭建与优化，结合运营侧精细策略落地，在平衡用户体验的基础上，提升触达与转化效果。
+                            </div>
+                            <ul class="detail-list">
+                                <li>针对iOS自定义通知图标兼容差异设计 A/B Test，收益验证后输出客户端 & 后台 PRD，上线实现 CTR提升 10%+。</li>
+                                <li>通过 A/B Test验证演员邀约类内容优势并落地相关端内活动，首期实现 AU订阅率提升 2.78%、ARPU 提升 1.4%。</li>
+                                <li>通过搭建端内消息中心聚合各类通知(关注演员上新、预约作品上线、资产过期、客服联络等)，迭代邮件绑定链路及弹窗逻辑、圈选静默人群包屏蔽无效推送，优化 PUSH提示音弱化感知，多举措降低用户打扰。</li>
+                                <li>统筹多渠道拉活与数据分析，通过精准 PUSH实现新业务冷启动，EDM新增演员关联板块，使点击率提升 49%。</li>
+                            </ul>
+                            <div class="portfolio-showcase">
+                                <button class="showcase-btn" id="openReelshortModal">
+                                    <i class="fas fa-images"></i> View Portfolio
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 实习2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header color-2">
+                            <div class="acc-title-area">
+                                <h3>Anker Innovation</h3>
+                                <p class="acc-role">西班牙 - 市场营销实习生</p>
+                            </div>
+                            <div class="acc-time">2025.12 - 2026.03</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="okr-box">
+                                <strong>OKR:</strong> 负责新品上市整合营销(策划悬念活动和UGC活动)，制定情人节和春促 EDM策略，输出年度战略规划。
+                            </div>
+                            <ul class="detail-list">
+                                <li>新品上市期间，统筹 KOL 筛选和效果评估，总曝光 10W+，分析其视频下用户评论，输出产品优化建议。结合 TA与竞品制定 PR策略，曝光提升 7%+。负责广告策划与投放，优化 CPC及转化率，销售 KPI完成 140%+。</li>
+                                <li>大促阶段，设计礼品卡、盲盒等玩法并落地于EDM宣传，OR提升 10%+、CTR提升 8%+，平均 REV提升 200%。</li>
+                                <li>通过用户访谈提炼西班牙市场核心人群画像与需求；依托大盘数据锁定 $40-60价格带突破机会；开展竞品多维度分析，涵盖搜索量、社媒、PR，输出强化“No.1品牌”心智的策略。</li>
+                            </ul>
+                            <div class="portfolio-showcase">
+                                <button class="showcase-btn" id="openAnkerModal">
+                                    <i class="fas fa-images"></i> View Portfolio
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 实习3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header color-3">
+                            <div class="acc-title-area">
+                                <h3>ZURU <span class="tag">全球 TOP5玩具外企</span></h3>
+                                <p class="acc-role">商业分析实习生</p>
+                            </div>
+                            <div class="acc-time">2025.09 - 2025.12</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="okr-box">
+                                <strong>OKR:</strong> 通过产品生命周期管理、搭建天气关联体系及核心产品竞品分析，提升销量预测精度与营销策略有效性。
+                            </div>
+                            <ul class="detail-list">
+                                <li>预测英德市场经销商各产品未来销量，制定库存管理方案，研判产品生命周期，输出每周行业分析报告。</li>
+                                <li>通过邮编爬虫、API调用，完成英国德市场经销商经纬度匹配，搭建气象区域可视化地图，构建销量与天气关联分析体系，上线首月推动季节性产品销量预测精度提升 23%。</li>
+                                <li>针对纸尿裤品牌及其竞品，于Tesco爬取品牌流量和用户互动等数据，提炼柔软为 KSP&USP，指导营销策略。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 实习4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header color-4">
+                            <div class="acc-title-area">
+                                <h3>中国银行</h3>
+                                <p class="acc-role">信贷 - 产品运营实习生</p>
+                            </div>
+                            <div class="acc-time">2023.07 - 2023.09</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="okr-box">
+                                <strong>OKR:</strong> 通过客群分析与竞品对标，识别客群认知漏洞，通过 A/B Test 优化信贷产品宣传策略，提升用户触达率。
+                            </div>
+                            <ul class="detail-list">
+                                <li>立足“中银 E分期”推广需求，锁定代发薪、房贷存量等客群，拆解其消费需求与信贷偏好等，完成分析报告。</li>
+                                <li>对标工行“分期通”等竞品，聚焦利率定价、授信额度、办理时效等维度，梳理产品优劣势，完成竞品分析报告。</li>
+                                <li>针对购车分期低感知问题，通过 A/B Test从内容和渠道双维度优化宣传策略，核心用户触达率提升 12%+。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学术和项目经历 Section -->
+            <section id="academic" class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 学术和项目经历 (Academic & Projects)</h2>
+                
+                <div class="accordion mt-3">
+                    <div class="accordion-item">
+                        <div class="accordion-header color-5">
+                            <div class="acc-title-area">
+                                <h3>基于来源的聚合对内容消费行为的影响</h3>
+                                <p class="acc-role">研究助理</p>
+                            </div>
+                            <div class="acc-time">2023.12 - 2024.12</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="detail-list">
+                                <li>采用双重差分(DID)、倾向得分匹配(PSM)和三重差分(DDD)模型，分析基于源聚合(SBA)对内容选择(点击)和内容参与(互动深度)的影响，得出SBA减少了内容选择，但增加了参与度，研究成果发表于 Journal of Business Research。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header color-6">
+                            <div class="acc-title-area">
+                                <h3>茶啵啵 —— 基于文化 IP的乡村振兴孵化器</h3>
+                                <p class="acc-role">负责人</p>
+                            </div>
+                            <div class="acc-time">2022.09 - 2023.09</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="detail-list">
+                                <li>与超18个村庄建立合作，重塑农产品包装，发明全景云数字茶园等专利技术，搭建电商小程序，每月每村营业额达数千元。获互联网+创新创业大赛获省级铜奖、校一等奖，全国志愿服务大赛省级二等奖、校特等奖。</li>
+                                <li>制作并发表数百篇推文和视频，总浏览量超10W+；孵化“茶啵啵”IP角色，推出相应文创产品和连载小说。</li>
+                            </ul>
+                            <div class="media-reports">
+                                <h4><i class="fas fa-book-open"></i> 事迹简介 (Project Stories)</h4>
+                                <div class="report-links">
+                                    <a href="https://mp.weixin.qq.com/s/MxvMbNsZoIZssRNp-SXc_Q" target="_blank" class="report-btn">
+                                        <i class="fab fa-weixin"></i> 简介一：茶啵啵项目专访
+                                    </a>
+                                    <a href="https://mp.weixin.qq.com/s/xfHp1ImjCjATBtsnbVo4wQ" target="_blank" class="report-btn">
+                                        <i class="fab fa-weixin"></i> 简介二：乡村振兴实践纪实
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header color-1">
+                            <div class="acc-title-area">
+                                <h3>西南财经大学学生资助中心</h3>
+                                <p class="acc-role">外联部、行政部部长</p>
+                            </div>
+                            <div class="acc-time">2023.03 - 2024.09</div>
+                            <i class="fas fa-chevron-down acc-icon"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="detail-list">
+                                <li>领导校级组织参与“三下乡”项目，获省级立项；在第九届社会实践展示活动中，跻身全国百强项目；事迹被《河北经济日报》、《人民日报》等报道；有关茶产业数字赋能和可持续发展的调研报告已完成出版。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目探索 Section -->
+            <section id="exploration" class="section">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> 项目探索 (Project Exploration)</h2>
+                <p class="section-subtitle">Vibe-coding & 营销分析项目 (持续更新中 ✨)</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card vibe-card">
+                        <div class="card-icon">🎨</div>
+                        <h3>Pixel Beads Art Generator</h3>
+                        <p class="category">Vibe-coding 项目</p>
+                        <p class="desc">像素拼豆艺术生成器，将图片一键转化为拼豆图纸，支持自定义颜色盘和网格大小。</p>
+                        <a href="https://pixel-bead-studio-production.up.railway.app/" target="_blank" class="view-project-btn">查看项目 (View Project) <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="project-card vibe-card">
+                        <div class="card-icon">✈️</div>
+                        <h3>AI Travel Assistant</h3>
+                        <p class="category">Vibe-coding 项目</p>
+                        <p class="desc">基于大语言模型的智能旅游规划小助手，提供个性化路线、预算评估和当地特色活动推荐。</p>
+                        <button class="coming-soon-btn">即将上线 (Coming Soon)</button>
+                    </div>
+
+                    <div class="project-card mkt-card">
+                        <div class="card-icon">🛒</div>
+                        <h3>JD Potential User Exploration</h3>
+                        <p class="category">营销分析项目</p>
+                        <p class="desc">利用机器学习模型挖掘电商平台潜在高价值用户，制定精准触达策略与转化方案。</p>
+                        <a href="proposal.pdf" target="_blank" class="view-project-btn">查看提案 (View Proposal) <i class="fas fa-file-pdf"></i></a>
+                    </div>
+                    
+                    <div class="project-card mkt-card coming-soon-card">
+                        <div class="card-icon">✨</div>
+                        <h3>Stay Tuned</h3>
+                        <p class="category">More Projects</p>
+                        <p class="desc">更多 Vibe-coding 与数据分析实战项目正在路上，敬请关注！</p>
+                        <div class="loader-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CV 下载 Section -->
+            <section id="cv" class="section">
+                <div class="cv-card">
+                    <div class="cv-content">
+                        <h2><i class="fas fa-file-pdf"></i> Resume / CV</h2>
+                        <p>想了解更多关于我的详细经历？欢迎下载我的完整版简历！</p>
+                        <a href="Meixi_Chen_CV.pdf" download="陈美希_Resume.pdf" class="download-btn">
+                            <i class="fas fa-cloud-download-alt"></i> 下载附件简历 (Download CV)
+                        </a>
+                    </div>
+                    <div class="cv-illustration">
+                        <!-- 一个简单的SVG插画 -->
+                        <svg viewBox="0 0 200 200" width="150" height="150">
+                            <circle cx="100" cy="100" r="90" fill="#fecfef" opacity="0.5"/>
+                            <rect x="60" y="40" width="80" height="110" rx="5" fill="#fff" stroke="#ff9a9e" stroke-width="4"/>
+                            <line x1="75" y1="60" x2="125" y2="60" stroke="#ff9a9e" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="75" y1="80" x2="125" y2="80" stroke="#ff9a9e" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="75" y1="100" x2="110" y2="100" stroke="#ff9a9e" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="100" cy="125" r="15" fill="#ff7675"/>
+                            <path d="M 95 125 L 100 130 L 110 120" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Anker 作品集弹窗 (Modal) -->
+    <div class="modal-overlay" id="ankerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeAnkerModal"><i class="fas fa-times"></i></button>
+            <h3 class="modal-title">Anker Innovation - 作品展示</h3>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="ankerPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track" id="ankerTrack">
+                    <img src="anker_work1.png" alt="Anker Work 1" class="carousel-slide">
+                    <img src="anker_work2.png" alt="Anker Work 2" class="carousel-slide">
+                    <img src="anker_work3.png" alt="Anker Work 3" class="carousel-slide">
+                    <img src="anker_work4.jpg" alt="Anker Work 4" class="carousel-slide">
+                </div>
+                <button class="carousel-btn next-btn" id="ankerNextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-indicators" id="ankerIndicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ReelShort 作品集弹窗 (Modal) -->
+    <div class="modal-overlay" id="reelshortModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeReelshortModal"><i class="fas fa-times"></i></button>
+            <h3 class="modal-title">枫叶互动 (ReelShort) - 作品展示</h3>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="reelshortPrevBtn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track" id="reelshortTrack">
+                    <img src="reelshort_work1.png" alt="ReelShort Work 1" class="carousel-slide">
+                    <img src="reelshort_work2.png" alt="ReelShort Work 2" class="carousel-slide">
+                    <img src="reelshort_work3.png" alt="ReelShort Work 3" class="carousel-slide">
+                    <img src="reelshort_work4.jpg" alt="ReelShort Work 4" class="carousel-slide">
+                </div>
+                <button class="carousel-btn next-btn" id="reelshortNextBtn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-indicators" id="reelshortIndicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js?v=1.2"></script>
+</body>
+</html>
